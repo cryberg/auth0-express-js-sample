@@ -3,9 +3,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const audience = process.env.AUTH0_AUDIENCE;
-const issuerUrl = process.env.AUTH0_ISSUER_URL;
-const serverPort = process.env.SERVER_PORT;
-const clientOriginUrl = process.env.CLIENT_ORIGIN_URL;
+const issuerUrl = process.env.AUTH0_ISSUER;
+const serverPort = process.env.API_PORT;
+const clientOriginUrl = process.env.APP_ORIGIN;
 
 if (!audience) {
   throw new Error(
