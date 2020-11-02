@@ -19,10 +19,10 @@ touch .env
 Populate `.env` as follows:
 
 ```bash
-SERVER_PORT=6060
-CLIENT_ORIGIN_URL=http://localhost:4040
+API_PORT=7000
+APP_ORIGIN=http://localhost:3000
 AUTH0_AUDIENCE=
-AUTH0_ISSUER_URL=
+AUTH0_ISSUER=
 ```
 
 Get the values for `AUTH0_AUDIENCE` and `AUTH0_ISSUER` from your Auth0 API in the Dashboard. You can find these values by following this path in the Dashboard:
@@ -40,7 +40,7 @@ var jwtCheck = jwt({
     jwksUri: "https://<TENANT-NAME>.auth0.com/.well-known/jwks.json",
   }),
   audience: "https://express.sample", // 👈 AUTH0_AUDIENCE value
-  issuer: "https://<TENANT-NAME>.auth0.com/", // 👈 AUTH0_ISSUER_URL value
+  issuer: "https://<TENANT-NAME>.auth0.com/", // 👈 AUTH0_ISSUER value
   algorithms: ["RS256"],
 });
 ```
@@ -49,7 +49,7 @@ Look at the object that the `jwt` function takes as argument and use the followi
 
 The `audience` property is the value of `AUTH0_AUDIENCE`.
 
-The `issuer` property is the value of `AUTH0_ISSUER_URL`.
+The `issuer` property is the value of `AUTH0_ISSUER`.
 
 Run the Node.js project:
 
