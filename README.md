@@ -2,6 +2,8 @@
 
 This repository contains a Node.js project that defines an Express API. You'll secure this API with Auth0 to practice making secure API calls from a client application.
 
+Associated FE is here: https://github.com/cryberg/auth0-react-sample
+
 ## Get Started
 
 Install the client project dependencies:
